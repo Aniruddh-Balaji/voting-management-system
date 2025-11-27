@@ -1,3 +1,0 @@
-NONE NONE NOTA 0
-voter1 #voter1 party1 2
-voter2 #voter2 party2 2

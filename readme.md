@@ -5,7 +5,7 @@ A simple implementation of a voting systme in c which has provisions for admin v
 
 This system simulates a simple election process using:
 - **Linked lists** for in-memory voter and candidate storage  
-- **Text files** for persistent data (`VOTER.txt`, `CANDIDATE.txt`)  
+- **Text files** for persistent data (`voter.txt`, `candidate.txt`,voter-updated.txt)  
 - **Admin module** for election control  
 - **Voter module** for casting and modifying votes
 - **candidate module** for candidate registering (NOTA is also available as candidate option)  
@@ -16,8 +16,8 @@ This system simulates a simple election process using:
 - start eletion
 - end election
 - add voter
-- adds voters to VOTER.txt and candidates to CANDIDATE.txt
-- at end of election updates VOTER.txt to show castedvote
+- adds voters to voter-updated.txt,voter.txt and candidates to candidate.txt
+- at end of election updates voter.txt to voter-updated.txt to show castedvote
 ### voter features
 - login check based on voter list provided by admin
 - cast vote
@@ -29,19 +29,19 @@ This system simulates a simple election process using:
 
 ## Project Structure
 VotingSystem/
-├── VOTER.txt
-├── CANDIDATE.txt 
+├── voter.txt
+├── cadidate.txt 
 ├── main.c 
-├── README.md 
+├── readme.md 
 └── src/
-└── VOTER1.txt
+└── voter-updated.txt
 ## File Formats
 
-### **VOTER.txt**
+### **voter.txt**
 
-### **VOTER1.txt**
+### **voter-updated.txt**
 
-### **CANDIDATE.txt**
+### **candidate.txt**
 ## Key Functions
 
 | Function | Purpose |
@@ -62,3 +62,4 @@ gcc main.c -o voting
 ## future enhancements
 
 - Encrypted admin & voter login
+- improve cli and add database usage and better security for login

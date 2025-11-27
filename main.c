@@ -86,7 +86,7 @@ int admin_logic()
                     scanf("%s",rep);
                     if (strcmp("yes",rep)==0)
                     {
-			    printf("enter voter name voterid");
+			    printf("enter voter name voterid\n");
                         scanf("%s %s",name,id);
                         write_voter(name,id);
                     }
@@ -126,7 +126,7 @@ int admin_logic()
 void update_voter(Voter *voter)
 {
 
-    FILE *fptr = fopen("VOTER_updated.txt", "w");
+    FILE *fptr = fopen("voter_updated.txt", "w");
     if (!fptr) return;
 
     while (voter != NULL)
@@ -145,7 +145,7 @@ void update_voter(Voter *voter)
 
 void write_voter(char name[], char voter_id[])
 {
-    FILE *fptr = fopen("VOTER.txt", "a");
+    FILE *fptr = fopen("voter.txt", "a");
     if (!fptr) return;
 
     fprintf(fptr, "%s %s\n", name, voter_id);
@@ -156,7 +156,7 @@ void write_voter(char name[], char voter_id[])
 
 void read_voter()
 {
-    FILE *fptr = fopen("VOTER.txt", "r");
+    FILE *fptr = fopen("voter.txt", "r");
     if (!fptr) return;
 
     char ch;
@@ -168,7 +168,7 @@ void read_voter()
 
 void write_candidate(Candidate *candidate)
 {
-    FILE *fptr = fopen("CANDIDATE.txt", "w");
+    FILE *fptr = fopen("candidate.txt", "w");
     if (!fptr) return;
 
     while (candidate != NULL)
@@ -187,7 +187,7 @@ void write_candidate(Candidate *candidate)
 
 void read_candidate()
 {
-    FILE *fptr = fopen("CANDIDATE.txt", "r");
+    FILE *fptr = fopen("candidate.txt", "r");
     if (!fptr) return;
 
     char ch;
@@ -211,7 +211,7 @@ Voter *new_voter(char name[],char casted_vote[],char voterId[])
 
 Voter *voter_linked_list(Voter *head)
 {
-    FILE *fp = fopen("VOTER.txt", "r");
+    FILE *fp = fopen("voter.txt", "r");
     if (fp == NULL) {
         printf("Cannot open VOTER.txt\n");
         return head;
