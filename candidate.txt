@@ -1,2 +1,2 @@
-NONE NONE NOTA 1
-v1 #v1 p1 1
+NONE NONE NOTA 0
+2 #2 p2 0
