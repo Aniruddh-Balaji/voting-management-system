@@ -1,2 +1,2 @@
-voter1 #voter1 
-aa aaa NOTA
+v1 #v1 NOTA
+v2 #v2 p1

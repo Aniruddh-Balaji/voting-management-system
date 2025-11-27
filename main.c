@@ -427,9 +427,10 @@ int main(){
             int a=admin_logic();
             if (a==1) {
                 voter_head=voter_linked_list(voter_head);
+		FILE *f=fopen("voter_updated.txt","w");                                                                                         fclose(f);
             }
             if (a==3) {
-		FILE *f=fopen("VOTER.txt","w");
+		FILE *f=fopen("voter.txt","w");
 		fclose(f);
 		write_candidate(cand_head);
 		update_voter(voter_head);

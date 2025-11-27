@@ -1,2 +1,0 @@
-voter1 #voter1
-aa aaa
