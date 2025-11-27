@@ -68,6 +68,7 @@ int admin_logic()
                     scanf("%s",rep);
                     if (strcmp("yes",rep)==0)
                     {
+			printf("Enter votername,voterid");
                         scanf("%s %s",name,id);
                         write_voter(name,id);
                     }
@@ -85,6 +86,7 @@ int admin_logic()
                     scanf("%s",rep);
                     if (strcmp("yes",rep)==0)
                     {
+			    printf("enter voter name voterid");
                         scanf("%s %s",name,id);
                         write_voter(name,id);
                     }
@@ -124,7 +126,7 @@ int admin_logic()
 void update_voter(Voter *voter)
 {
 
-    FILE *fptr = fopen("VOTER1.txt", "w");
+    FILE *fptr = fopen("VOTER_updated.txt", "w");
     if (!fptr) return;
 
     while (voter != NULL)
