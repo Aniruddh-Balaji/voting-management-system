@@ -46,7 +46,7 @@ int admin_logic()
         {
             int op;
             printf("You have logged in succesfully!\n");
-            printf("---------------------------------------------------------------------------\nchoose from the following\n1)to start election\n2)to add voters\n3)to terminate election\n----------------------------------------------------\n");
+            printf("---------------------------------------------------------------------------\nchoose from the following\n1)to start election\n3)to terminate election\n----------------------------------------------------\n");
             scanf("%d", &op);
             if (op == 1)
             {
@@ -66,24 +66,6 @@ int admin_logic()
                 }
                 return 1;
             }
-            if(op==2)
-           {
-                char rep[10]="yes",name[30];
-                char id[20];
-                while(1)
-                {
-                    printf("do you want to enter votername voterid to put in voter list\nType yes if so\n");
-                    scanf("%s",rep);
-                    if (strcmp("yes",rep)==0)
-                    {
-                            printf("enter voter name voterid\n");
-                        scanf("%s %s",name,id);
-                        write_voter(name,id);
-                    }
-                    else break;
-                }
-                return 1;
-        }
             if (op == 3)
             {
                 int x;
